@@ -24,7 +24,7 @@ while True:
         data_out = open('data.csv', 'w')
         data_out.write(old + content + '\n')
         data_out.close()
-    # if data.csv exist, build a file and save the data
+    # if data.csv not exist, build a file and save the data
     else:
         data_out = open('data.csv', 'w')
         data_out.write(content + '\n')
