@@ -2,17 +2,17 @@
 from microbit import *
 
 import random
-#game description
+# game description
 display.scroll('Press "a" button if the given number is odd, and press "b" button if the given number is even. Ready? go!') 
 sleep(500)
-#initialization
+# initialization
 game = True
 
-#main loop
+# main loop
 while game:
     number = random.randint(1,9)
     display.show(number)
-    #wait for the answer and judge
+    # wait for the answer and judge
     while True:
         if button_a.is_pressed() and (number % 2) == 0:
             display.show(Image.NO)
@@ -27,9 +27,9 @@ while game:
             display.show(Image.NO)
             break
     sleep(1500)
-    #wether to continue
+    # wether to continue
     display.scroll('Press "a" to continue, "b" to quit.', wait = False, loop = True, delay = 100)
-    #wait for the answer and judge
+    # wait for the answer and judge
     while True:
         if button_a.is_pressed():
             sleep(1000)
@@ -37,6 +37,6 @@ while game:
         elif button_b.is_pressed():
             game = False
             break
-#game finish
+# game ends
 display.scroll('See ya!')
     
