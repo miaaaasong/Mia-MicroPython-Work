@@ -12,7 +12,7 @@ game = True
 while game:
     number = random.randint(1,9)
     display.show(number)
-    # wait for the answer and judge
+    # wait for the answer and judge if the user put the right answer
     while True:
         if button_a.is_pressed() and (number % 2) == 0:
             display.show(Image.NO)
@@ -29,7 +29,7 @@ while game:
     sleep(1500)
     # wether to continue
     display.scroll('Press "a" to continue, "b" to quit.', wait = False, loop = True, delay = 100)
-    # wait for the answer and judge
+    # wait for the answer and judge if user wants to continue the game
     while True:
         if button_a.is_pressed():
             sleep(1000)
